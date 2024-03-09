@@ -1,0 +1,197 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: skyblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 70px;
+}
+
+.header {
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    right: 0;
+}
+
+
+
+
+.nav-links {
+    display: flex;
+    height: 60%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70vh;
+}
+
+.nav-links a {
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    color: black;
+}
+
+.nav-links a:hover {
+    border-bottom: solid 2px;
+}
+
+.logo {
+    position: absolute;
+    height: 60px;
+    left: 50px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .nav-links.mobile-nav {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        top: 120px;
+        height: 170px;
+        width: 100%;
+        border-top: solid 1px;
+        background-color: white;
+    }
+    .nav-links.mobile-nav a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+    }
+    .nav-links.mobile-nav a:hover {
+        background-color: powderblue;
+        border: none;
+        font-size: 20px;
+        transition: all 0.1s ease-in-out;
+    }
+    .menu {
+        border: none;
+    }
+    .menu:hover {
+        cursor: pointer;
+    }
+}
+
+.menu.invert {
+    filter: invert(1);
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 6px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.menu img {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+
+.cardsControll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    top: 50vh;
+}
+
+@media (max-width: 1250px) {
+    .cardsControll {
+      grid-template-columns: repeat(2, 1fr);
+      top: 110vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardsControll {
+        grid-template-columns: repeat(1, 1fr);
+        top: 220vh;
+      }
+}
+
+
+.cardsControll div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 45vh;
+    width: 50vh;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    margin: 30px;
+}
+  
+.person {
+    border-bottom: solid 1px red;
+    margin-bottom: 7px;
+}
+
+.cardsControll a, p {
+    text-decoration: none;
+    color: black;
+}
+  
+.description {
+    font-size: 13px;
+    border: solid 1px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+#drakeimg,
+#metroimg,
+#nickiimg,
+#adeleimg,
+#travisimg,
+#twentytwoimg,
+#weekndimg,
+#eminemimg,
+#juiceimg {
+    height: 30vh;
+    width: 30vh; 
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px 0;
+}
+  
+#adeleimg {
+    object-position: top;
+}
+
+a div:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: lightgray;
+    transition: all 0.2s ease-in-out;
+}
+
